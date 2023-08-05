@@ -1,9 +1,9 @@
-package com.example.todolist.projectRV
+package com.example.todolist.ui.projectRV
 
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.todolist.projectRV.ProjectsItemTouchHelperAdapter
+import com.example.todolist.ui.projectRV.ProjectsItemTouchHelperAdapter
 
 
 class ProjectsItemTouchHelperCallback: ItemTouchHelper.Callback {

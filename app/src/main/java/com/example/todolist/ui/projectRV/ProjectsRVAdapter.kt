@@ -1,4 +1,4 @@
-package com.example.todolist.projectRV
+package com.example.todolist.ui.projectRV
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

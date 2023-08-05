@@ -1,28 +1,64 @@
 package com.example.todolist.ui.activities
 
+import android.app.AlertDialog
+import android.content.Context
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.MenuItem
 import android.view.View
+import android.widget.EditText
+import android.widget.Toast
+import androidx.fragment.app.FragmentTransaction
 import com.example.todolist.R
 
+import com.example.todolist.databinding.ActivityMainBinding
+
+import com.example.todolist.ui.alertDialogs.NewProjectDialogFragment
+
+
 class MainActivity : AppCompatActivity() {
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        super.onWindowFocusChanged(hasFocus)
-        if (hasFocus) {
-           getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        or View.SYSTEM_UI_FLAG_FULLSCREEN
-                        or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-            )
-        }
-    }
+
+    private var _binding: ActivityMainBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
+        _binding = ActivityMainBinding.inflate(layoutInflater)
+
+        setContentView(binding.root)
+
+
+        binding.bottomNavigationView.setOnNavigationItemSelectedListener {
+            when(it.itemId){
+                R.id.menu_home->Toast.makeText(this, "ghbdtn", Toast.LENGTH_SHORT).show()
+                R.id.menu_new->{
+
+
+
+
+                   val newProjectialogFragment = NewProjectDialogFragment()
+                    val manager = supportFragmentManager
+                    val transaction: FragmentTransaction = manager.beginTransaction()
+                    newProjectialogFragment.show(transaction, "dialog")
+
+                }
+                R.id.menu_profile->Toast.makeText(this, "ghbdtn", Toast.LENGTH_SHORT).show()
+
+            }
+            true
+        }
+
+
+
+
+
+    }
+
+
+
+    private fun sendDialogDataToActivity(data: String) {
+        Toast.makeText(this, data, Toast.LENGTH_SHORT).show()
     }
 }

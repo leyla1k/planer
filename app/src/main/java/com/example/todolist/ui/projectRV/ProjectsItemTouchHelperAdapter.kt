@@ -1,4 +1,4 @@
-package com.example.todolist.projectRV
+package com.example.todolist.ui.projectRV
 
 interface ProjectsItemTouchHelperAdapter {
 

@@ -1,4 +1,4 @@
-package com.example.todolist.projectRV
+package com.example.todolist.ui.projectRV
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.todolist.entities.Project

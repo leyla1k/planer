@@ -14,9 +14,9 @@ import com.example.todolist.ProjectsViewModelFactory
 import com.example.todolist.database.ProjectsRepository
 import com.example.todolist.databinding.FragmentProjectsBinding
 import com.example.todolist.entities.Project
-import com.example.todolist.projectRV.ProjectsItemTouchHelperCallback
-import com.example.todolist.projectRV.ProjectsRVAdapter
-import com.example.todolist.projectRV.VerticalSpaceItemDecoration
+import com.example.todolist.ui.projectRV.ProjectsItemTouchHelperCallback
+import com.example.todolist.ui.projectRV.ProjectsRVAdapter
+import com.example.todolist.ui.projectRV.VerticalSpaceItemDecoration
 
 
 class ProjectsFragment : Fragment() {
